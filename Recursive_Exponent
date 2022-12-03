@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class App {
+  static int üsalma(int taban,int üs){
+      if(üs==0)return 1;
+      else{
+        return taban*üsalma(taban,üs-1);
+      }
+      
+      
+    }
+    
+
+public static void main(String[] args) {
+  int t,ü;
+    Scanner scan = new Scanner(System.in);
+      while(true){
+        System.out.println("Taban değerini giriniz: ");
+        t = scan.nextInt();
+        System.out.println("Üs değerini giriniz: ");
+        ü = scan.nextInt();
+        System.out.println("Sonuç: "+üsalma(t,ü));
+        if(t==0 || ü==0)
+        break;
+      }
+ }
+}
